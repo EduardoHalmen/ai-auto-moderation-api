@@ -1,0 +1,8 @@
+# Data
+/data/
+
+# Mac Os-specfifc storage files
+.DS_Store
+
+# Virtual environment
+venv
