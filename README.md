@@ -1,4 +1,4 @@
-# Building a Toxic Comment Classification Models
+# Building a Toxic Comment Classification Model
 
 This project focuses on the exploration toxic comments, with the goal of building robust text classification models. The primary dataset used is the **Jigsaw Unintended Bias in Toxicity Classification** dataset.
 
@@ -24,21 +24,21 @@ This project focuses on the exploration toxic comments, with the goal of buildin
 ├── src/            # Source code for data processing, modeling, and utilities
 ├── results/        # Model outputs, evaluation metrics, and visualizations
 ├── requirements.txt
-└── README.md       
+└── README.md     
 ```
 
 ## Getting Started
 
 1. Download the dataset from Kaggle and place it in the `data/` directory.
 2. Run:
-    ```
-    ./setup.sh
-    ```
+   ```
+   ./setup.sh
+   ```
 3. Explore the notebooks in the `notebooks/`.
 4. Deactivate environment
-    ```
-    deactivate
-    ```
+   ```
+   deactivate
+   ```
 
 ## Future Work
 
