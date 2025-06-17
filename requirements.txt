@@ -7,3 +7,5 @@ seaborn
 scikit-learn
 jupyter
 nltk
+wordcloud
+imbalanced-learn
