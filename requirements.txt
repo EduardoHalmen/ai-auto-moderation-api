@@ -7,6 +7,9 @@ seaborn
 scikit-learn
 jupyter
 nltk
+eli5
+lime
+scipy
 wordcloud
 imbalanced-learn
 scikit-multilearn
