@@ -245,4 +245,4 @@ def compute_bias_metrics_for_model(dataset: pd.DataFrame,
         compute_bias_metrics_for_subgroup_and_model(dataset, subgroup, label, pred_col)
         for subgroup in subgroups
     ]
-    return pd.DataFrame(metrics_list).sort_values(by=SUBGROUP_SIZE, ascending=True)
+    return pd.DataFrame(metrics_list).sort_values(by=SUBGROUP_AUC, ascending=True)
