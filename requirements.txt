@@ -9,3 +9,5 @@ jupyter
 nltk
 wordcloud
 imbalanced-learn
+scikit-multilearn
+sentence-transformers
