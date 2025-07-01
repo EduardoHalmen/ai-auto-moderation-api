@@ -1,5 +1,6 @@
 # Data
 /data/
+/translation_cache
 
 # Mac Os-specfifc storage files
 .DS_Store
