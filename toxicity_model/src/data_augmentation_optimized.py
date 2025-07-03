@@ -119,7 +119,7 @@ def validate_translation(original, translated, min_bleu=0.1, debug=True):
     return True
 
 # Create a cache directory if it doesn't exist
-os.makedirs('translation_cache', exist_ok=True)
+os.makedirs(os.path.join(os.path.dirname(__file__), 'translation_cache'), exist_ok=True)
 
 # Global flag to indicate if the script should stop
 should_stop = False
@@ -172,7 +172,7 @@ def save_to_cache(text, translated_text, source_lang, target_lang):
     translation_cache[key] = translated_text
     
     # Also save to disk for persistence
-    cache_file = f"translation_cache/{key}.txt"
+    cache_file = os.path.join(os.path.dirname(__file__), 'translation_cache', f"{key}.txt")
     with open(cache_file, 'w', encoding='utf-8') as f:
         f.write(translated_text)
 
@@ -185,7 +185,7 @@ def load_from_cache(text, source_lang, target_lang):
         return translation_cache[key]
     
     # Then check disk cache
-    cache_file = f"translation_cache/{key}.txt"
+    cache_file = os.path.join(os.path.dirname(__file__), 'translation_cache', f"{key}.txt")
     if os.path.exists(cache_file):
         with open(cache_file, 'r', encoding='utf-8') as f:
             translation = f.read()
