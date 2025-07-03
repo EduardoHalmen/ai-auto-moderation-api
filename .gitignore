@@ -1,6 +1,8 @@
 # Data
-/data/
-/translation_cache
+/toxicity_model/data/
+/toxicity_model/src/translation_cache/
+/api/model/roberta-finetune-toxic/
+
 
 # Mac Os-specfifc storage files
 .DS_Store
