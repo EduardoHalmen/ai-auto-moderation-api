@@ -35,7 +35,6 @@ You no longer need to manually store or load large model files inside the reposi
 .
 ├── api/                     # Encapsulates the API
    ├── app/                  # API implementation
-   ├── model/                # [Legacy] Previously used for model storage, now replaced by Hugging Face
    ├── Dockerfile   
    ├── requirements.txt
 
