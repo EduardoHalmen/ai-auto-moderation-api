@@ -12,7 +12,6 @@ This project focuses on building a deployable toxicity detection system, includi
 * **API:** Implement an API that uses the model to evaluate text.
 * **UI:** Implement a simple UI to demonstrate the usage of the API and visualize the model's response.
 
----
 
 ## Model Access
 
@@ -23,14 +22,12 @@ The API automatically downloads the model from this link during initialization:
 
 You no longer need to manually store or load large model files inside the repository.
 
----
 
 ## Datasets
 
 * [Jigsaw Unintended Bias in Toxicity Classification](https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification)
 * [Toxic Comment Classification Challenge](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data)
 
----
 
 ## Project Structure
 
@@ -59,7 +56,6 @@ You no longer need to manually store or load large model files inside the reposi
    └── README.md     
 ```
 
----
 
 ## Getting Started
 
@@ -75,7 +71,6 @@ You no longer need to manually store or load large model files inside the reposi
    * **API Documentation (Swagger):** [http://localhost:8000/docs](http://localhost:8000/docs)
    * **UI for Testing:** [http://localhost:8501](http://localhost:8501)
 
----
 
 ### Running Only the UI:
 
@@ -96,7 +91,6 @@ You no longer need to manually store or load large model files inside the reposi
    ```
 4. Access the UI at: [http://localhost:8501](http://localhost:8501)
 
----
 
 ### Running Only the API:
 
@@ -117,7 +111,6 @@ You no longer need to manually store or load large model files inside the reposi
    ```
 4. Access the API documentation at: [http://localhost:8000/docs](http://localhost:8000/docs)
 
----
 
 ### Exploring the `toxicity_model` Directory (Optional):
 
@@ -142,7 +135,6 @@ For additional exploration or experimentation:
    deactivate
    ```
 
----
 
 ## Future Work
 
