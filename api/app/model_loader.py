@@ -36,5 +36,5 @@ class Model:
         return result
 
 def load_model():
-    model_url = "https://huggingface.co/sofiasartori24/roberta-finetune-toxic"
+    model_url = "sofiasartori24/roberta-finetune-toxic"
     return Model(model_url)
