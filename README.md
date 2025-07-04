@@ -1,39 +1,53 @@
 # ToxBlock: Toxicity Detection System
 
-This project focuses on building a deployable toxicity detection system, including robust text classification models, an API, and a user-friendly interface for testing and visualization. The primary datasets used were the **Jigsaw Unintended Bias in Toxicity Classification** dataset and the **Toxic Comment Classification Challenge**
+This project focuses on building a deployable toxicity detection system, including robust text classification models, an API, and a user-friendly interface for testing and visualization. The primary datasets used were the **Jigsaw Unintended Bias in Toxicity Classification** dataset and the **Toxic Comment Classification Challenge**.
 
 ## Project Goals
 
-- **Data Exploration:** Analyze and visualize the distribution and characteristics of toxic comments.
-- **Data Processing:** Clean, preprocess, and engineer features from the raw text data.
-- **Modeling:** Implement and evaluate machine learning and deep learning models for toxicity classification.
-- **Bias Analysis:** Assess unintended bias in model predictions.
-- **Evaluation:** Use appropriate metrics to evaluate model performance and fairness.
-- **API:** Implement an API that uses the model to evaluate text
-- **UI:** Implement a simple UI to demonstrate the usage of the API and visualize the Model's response
+* **Data Exploration:** Analyze and visualize the distribution and characteristics of toxic comments.
+* **Data Processing:** Clean, preprocess, and engineer features from the raw text data.
+* **Modeling:** Implement and evaluate machine learning and deep learning models for toxicity classification.
+* **Bias Analysis:** Assess unintended bias in model predictions.
+* **Evaluation:** Use appropriate metrics to evaluate model performance and fairness.
+* **API:** Implement an API that uses the model to evaluate text.
+* **UI:** Implement a simple UI to demonstrate the usage of the API and visualize the model's response.
 
-## Datasets:
-- [Jigsaw Unintended Bias in Toxicity Classification](https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification)
-- [Toxic Comment Classification Challenge](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data)
+---
+
+## Model Access
+
+The final fine-tuned RoBERTa model is now hosted on **Hugging Face Hub**, making the project lighter and easier to deploy.
+The API automatically downloads the model from this link during initialization:
+
+👉 [https://huggingface.co/sofiasartori24/roberta-finetune-toxic](https://huggingface.co/sofiasartori24/roberta-finetune-toxic)
+
+You no longer need to manually store or load large model files inside the repository.
+
+---
+
+## Datasets
+
+* [Jigsaw Unintended Bias in Toxicity Classification](https://www.kaggle.com/competitions/jigsaw-unintended-bias-in-toxicity-classification)
+* [Toxic Comment Classification Challenge](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data)
+
+---
 
 ## Project Structure
 
 ```
 .
-├── api/                     # Encapsulates the api
-   ├── app/                  # Implementation of the api
-   ├── model/                # Storage of the model
+├── api/                     # Encapsulates the API
+   ├── app/                  # API implementation
+   ├── model/                # [Legacy] Previously used for model storage, now replaced by Hugging Face
    ├── Dockerfile   
    ├── requirements.txt
 
 ├── frontend/                # Encapsulates the UI
-   ├── app/                  # Implementation of the UI
+   ├── app/                  # UI implementation
    ├── Dockerfile   
    ├── requirements.txt
 
-
-
-├── toxicity_model/          # Encapsulates the modeling aspect of the project
+├── toxicity_model/          # Modeling, data processing, and experimentation
    ├── data/                 # Raw data from the Unbiased Challenge
       ├── wikipedia_data/    # Raw data from the Toxic Comment Challenge
       ├── merged_data/       # Processed data from both challenges 
@@ -45,6 +59,7 @@ This project focuses on building a deployable toxicity detection system, includi
    └── README.md     
 ```
 
+---
 
 ## Getting Started
 
@@ -60,6 +75,7 @@ This project focuses on building a deployable toxicity detection system, includi
    * **API Documentation (Swagger):** [http://localhost:8000/docs](http://localhost:8000/docs)
    * **UI for Testing:** [http://localhost:8501](http://localhost:8501)
 
+---
 
 ### Running Only the UI:
 
@@ -78,8 +94,9 @@ This project focuses on building a deployable toxicity detection system, includi
    ```bash
    docker run -p 8501:8501 toxicity-ui
    ```
-4. Access the UI in your browser at: [http://localhost:8501](http://localhost:8501)
+4. Access the UI at: [http://localhost:8501](http://localhost:8501)
 
+---
 
 ### Running Only the API:
 
@@ -98,17 +115,20 @@ This project focuses on building a deployable toxicity detection system, includi
    ```bash
    docker run -p 8000:8000 toxicity-api
    ```
-4. Access the API documentation in your browser at: [http://localhost:8000/docs](http://localhost:8000/docs)
+4. Access the API documentation at: [http://localhost:8000/docs](http://localhost:8000/docs)
 
+---
 
-### Exploring the `toxicity_model` Directory:
+### Exploring the `toxicity_model` Directory (Optional):
 
-1. Download the datasets from Kaggle and place them inside:
+For additional exploration or experimentation:
+
+1. Download the datasets from Kaggle and place them in:
 
    * `toxicity_model/data/`
    * `toxicity_model/data/wikipedia_data/`
 
-2. Inside the `toxicity_model` directory, run the setup script:
+2. Inside the `toxicity_model` directory, run:
 
    ```bash
    ./setup.sh
@@ -126,10 +146,7 @@ This project focuses on building a deployable toxicity detection system, includi
 
 ## Future Work
 
-- Continue improving model performance through advanced techniques and hyperparameter tuning
-
-- Utilize bias analysis results to implement targeted mitigation strategies
-
-- Explore lightweight model alternatives for faster inference if needed
-
-- Expand the system to detect additional categories or languages
+* Continue improving model performance through advanced techniques and hyperparameter tuning.
+* Utilize bias analysis results to implement targeted mitigation strategies.
+* Explore lightweight model alternatives for faster inference if needed.
+* Expand the system to detect additional categories or languages.
