@@ -16,3 +16,4 @@ scikit-multilearn
 sentence-transformers
 keras
 deep_translator
+torch
