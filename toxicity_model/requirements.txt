@@ -17,3 +17,4 @@ sentence-transformers
 keras
 deep_translator
 torch
+# transformers
